@@ -18,7 +18,7 @@ const Navbar = (props) => {
     }
 
     return (
-        <nav className="flex flex-row w-full justify-end h-16 bg-teal-100 px-2 gap-4 items-center">
+        <nav className="flex flex-row w-full justify-end h-16 bg-teal-100 px-2 gap-4 items-center" data-testid="navbar">
             <NavButton clickHandle={homeButton} text="Inicio" />
             <NavButton clickHandle={registerButton} text="Crear cuenta" />
             <NavButton clickHandle={userButton} text="Usuarios" />

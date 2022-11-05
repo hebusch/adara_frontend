@@ -7,7 +7,7 @@ const User = ({user}) => {
     if(!user.name)
     {
         return(
-            <div className="flex flex-col gap-2 text-center mt-4 justify-center items-center">
+            <div className="flex flex-col gap-2 text-center mt-4 justify-center items-center" data-testid="invalid-user">
                 <HiEmojiSad size={50} className="text-teal-600"/>
                 <p> No se encontró el usuario </p>
             </div>
@@ -17,7 +17,7 @@ const User = ({user}) => {
 
 
     return (
-        <div className="flex flex-col gap-2 text-center mt-4">
+        <div className="flex flex-col gap-2 text-center mt-4" data-testid="valid-user">
             <p> Nombre: {user.name} </p>
             <p> Apellido: {user.lastName} </p>
             <p> Email: {user.email} </p>

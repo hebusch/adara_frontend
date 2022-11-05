@@ -24,7 +24,7 @@ const Users = () => {
     }
 
     return (
-        <>
+        <div data-testid="users">
             <Navbar />
             <div className="flex flex-col justify-center items-center w-full my-8">
                 <div className="shadow-sm shadow-black p-5 max-sm:w-[90%] w-1/3 h-auto flex flex-col items-center justify-center gap-5 bg-white rounded-md">
@@ -47,7 +47,7 @@ const Users = () => {
                     {sent && <User user={user} />}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

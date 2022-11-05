@@ -37,7 +37,7 @@ const Register = () => {
     }
 
     return (
-        <>
+        <div data-testid="register">
         <Navbar />
         <div className="flex flex-col justify-center items-center w-full my-8">
             <div className="shadow-sm shadow-black p-5 max-sm:w-[90%] w-1/2 h-auto flex flex-col items-center justify-center gap-5 bg-white rounded-md">
@@ -188,7 +188,7 @@ const Register = () => {
                 {registerError && <p className="text-red-500 text-sm">{registerError}</p>}
             </div>
         </div>
-        </>
+        </div>
     )
 }
 
