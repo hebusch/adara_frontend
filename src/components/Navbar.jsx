@@ -1,11 +1,16 @@
 import {React} from 'react'
 import { useNavigate } from 'react-router-dom';
+import NavButton from './NavButton';
 
 const Navbar = (props) => {
     const navigate = useNavigate();
 
+    const homeButton = () => {
+        navigate('/');
+    }
+
     const registerButton = () => {
-        console.log('Register');
+        navigate('/register');
     }
 
     const userButton = () => {
@@ -13,13 +18,10 @@ const Navbar = (props) => {
     }
 
     return (
-        <nav className="flex flex-row w-full justify-end h-16 bg-teal-50 px-2 gap-4 items-center">
-            <button onClick={registerButton} className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded h-12">
-                Register
-            </button>
-            <button onClick={userButton} className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded h-12">
-                Get User
-            </button>
+        <nav className="flex flex-row w-full justify-end h-16 bg-teal-100 px-2 gap-4 items-center">
+            <NavButton clickHandle={homeButton} text="Inicio" />
+            <NavButton clickHandle={registerButton} text="Crear cuenta" />
+            <NavButton clickHandle={userButton} text="Usuarios" />
         </nav>  
     )
 }
