@@ -70,6 +70,8 @@ Para las validaciones se utilizó la librería `react-hook-forms`. Esta librerí
 
 Hice testeo, con la librería `jest`, para ver si los componentes y las vistas se renderizan correctamente.
 
+Repositorio backend: https://github.com/hebusch/adara_backend
+
 #### Uso de Git
 
 Hice un correcto uso de gitflow, al seguir diferentes ramas, conventional commits y pull requests.
