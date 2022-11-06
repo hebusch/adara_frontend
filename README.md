@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Frontend Tarea Development Adara
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Se desarrolló esta aplicación para la tarea de development del proceso de postulación de Adara.
 
-## Available Scripts
+## Tecnologías Utilizadas :computer:
 
-In the project directory, you can run:
+```json
+{
+    "language": "Node.js",
+    "UILibrary": "React.js",
+    "CSSLibrary": "TailwindCSS",
+    "testing": "jest",
+    "packageManager": "npm"
+}
+```
 
-### `npm start`
+## Configuración Inicial :wrench:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Instalar las dependencias:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+$ npm install
+```
 
-### `npm test`
+2. Crear archivo `.env` para las variables de entorno:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```env
+REACT_APP_API_URL=
+```
 
-### `npm run build`
+A modo de ejemplo:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```env
+REACT_APP_API_URL=http://localhost:3000
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Iniciar la App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+$ npm start
+```
 
-### `npm run eject`
+## Tests :clipboard:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para correr los tests correr el siguiente comando:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+$ npm test
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ¿Qué hice y cómo lo hice?
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Vistas
 
-## Learn More
+Hice tres vistas principales. En dos de ellas se pueden realizar las funcionalidades solicitades, y una corresponde a la landing page. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* `/`: Landing Page.
+* `/register`: Vista con un formulario para registrar un nuevo usuario.
+* `/users`: Vista con un formulario para solicitar información de un usuario con el correo.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Toda la interfaz de usuario fue realizada con `React.js`, y el CSS fue realizado con la librería `TailwindCSS`.
 
-### Code Splitting
+Se puede navegar a través de las páginas gracias a la Navbar implementada.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Validaciones
 
-### Analyzing the Bundle Size
+Para las validaciones se utilizó la librería `react-hook-forms`. Esta librería es útil para realizar formularios más eficientes y generar validaciones rápidas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Testing
 
-### Making a Progressive Web App
+Hice testeo, con la librería `jest`, para ver si los componentes y las vistas se renderizan correctamente.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Uso de Git
 
-### Advanced Configuration
+Hice un correcto uso de gitflow, al seguir diferentes ramas, conventional commits y pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### ¿Qué me faltó?
 
-### Deployment
+Debido a la limitación de tiempo, no incorporé estilo en el display de la información del usuario solicitado. Mi idea aquí era implementar una tabla para desplegar la información.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Tampoco implementé `selects` para los atributos de Región y Comuna. Mi idea era mostrar ambos selects con las regiones de chile y sus comunas respectivas.
 
-### `npm run build` fails to minify
+También me hubiese gustado implementar un anillo de "loading", al momento de esperar los datos de usuario. Realizar esto con tailwind y useState de React es sencillo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Preguntas
+
+1. ¿Cómo deployearías esta aplicación para producción?
+
+Para deployar el frontend, utilizaría un servicio como `Netlify`, o `Vercel`, las cuales son buenas opciones para deployar frontend. 
+
+Para esto, se vincula el servicio con github, específicamente la rama `main` del repositorio del proyecto. De esta forma, cada pull request hacia `main`, redeployearía la aplicación. 
+
+Para el caso del backend, en primer lugar, es cambiar la variable de entorno `NODE_ENV` a `production`. Luego, es necesario hostear la API en un web server con Node. Para esto pueden ser utiles servicios de `AWS`, `DigitalOcean`, `Heroku`, entre otros. 
+
+También en el caso del backend, es necesario contar con un host de bases de datos, donde los mismos proveedores mencionados anteriormente son útiles para resolver esto.
+
+Por último, se asigna como variable de entorno en el backend la `URL` de la base de datos.
+
+2. ¿Por qué elegiste esta tarea y no la otra?
+
+Si bien también se como resolver la otra tarea, elegí esta tarea porque el desarrollo full stack es mi fuerte y la que más me apasiona entre ambas áreas. 
