@@ -14,7 +14,7 @@ const Navbar = (props) => {
     }
 
     const userButton = () => {
-        console.log('Get User');
+        navigate('/users');
     }
 
     return (
