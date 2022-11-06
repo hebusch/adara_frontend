@@ -2,6 +2,8 @@
 
 Se desarrolló esta aplicación para la tarea de development del proceso de postulación de Adara.
 
+Repositorio backend: https://github.com/hebusch/adara_backend
+
 ## Tecnologías Utilizadas :computer:
 
 ```json
@@ -69,8 +71,6 @@ Para las validaciones se utilizó la librería `react-hook-forms`. Esta librerí
 #### Testing
 
 Hice testeo, con la librería `jest`, para ver si los componentes y las vistas se renderizan correctamente.
-
-Repositorio backend: https://github.com/hebusch/adara_backend
 
 #### Uso de Git
 
